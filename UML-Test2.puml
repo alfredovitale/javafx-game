@@ -1,0 +1,46 @@
+@startuml
+class Main {
+~ Stage window
+~ Scene rootScreen
+~ int WIDTH
+~ int HEIGHT
+- AnimationTimer timer
+- Pane root
+- List<Node> cars
+- Node frog
+- int startPosition
++ {static} void main(String[])
+- Parent createContent()
+- void onUpdate()
+- void checkState()
+- Node initFrog()
+- Node initCar()
++ void start(Stage)
+}
+class controllers.RegistrationController {
+- Button submitBtn
+- void handleButtonAction(ActionEvent)
+- void navigateToPlayground()
+}
+class sample.Main {
++ void start(Stage)
++ {static} void main(String[])
+}
+class controllers.PlaygroundController {
+}
+class sample.Controller {
+}
+class controllers.ScreenController {
+- {static} ScreenController INSTANCE
+- HashMap<String,Pane> screenMap
+- Scene main
++ {static} ScreenController getInstance()
++ void add(String,Pane)
++ void remove(String)
++ void activate(String)
+}
+
+
+javafx.application.Application <|-- Main
+javafx.application.Application <|-- sample.Main
+@enduml
