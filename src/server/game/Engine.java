@@ -74,7 +74,7 @@ public class Engine {
     }
 
     private void spawnCar(final int line) {
-        Car car = new Car(idGen.incrementAndGet(),UNIT_SIZE + (UNIT_SIZE * 0.7), UNIT_SIZE);
+        Car car = new Car(idGen.incrementAndGet());
         road.add(car, line);
     }
 
