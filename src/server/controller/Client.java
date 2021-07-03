@@ -149,8 +149,8 @@ public class Client implements Runnable {
 
             Room room = StartServer.roomManager.newRoom();
             // add clients to the new room
-            room.addClient(this);
-            room.addClient(opponent);
+            room.addClient(opponent); // first client
+            room.addClient(this); // second client who has found a match
 
             // send confirmation that clients joined the room with id
             this.sendDataToClient(ActionTypes.ActionType.JOIN_ROOM.name() + ";" + ActionTypes.Code.SUCCESS.name() + ";" + room.getData());

@@ -30,14 +30,23 @@ public class Frog extends Rectangle {
         final double fromX = getTranslateX();
         final double fromY = getTranslateY();
         System.out.printf("from (%f %f) to (%f %f)\n", fromX, fromY, x, y);
+        if (x == fromX && y == fromY) return;
         Direction newDirection = Direction.find(fromX, fromY, x, y);
         rotateTo(newDirection);
+        translate(fromX, fromY, x, y);
+    }
+
+    private void translate(final double fromX, final double fromY, final double x, final double y) {
         TranslateTransition translate = new TranslateTransition(Duration.millis(FROG_TRANSITION_TIME), this);
         translate.setFromX(fromX);
         translate.setToX(x);
         translate.setFromY(fromY);
         translate.setToY(y);
         translate.play();
+        set(x, y);
+    }
+
+    private void set(final double x, final double y) {
         setTranslateX(x);
         setTranslateY(y);
     }
@@ -56,8 +65,7 @@ public class Frog extends Rectangle {
     }
 
     public void reset(final double x, final double y) {
-        setTranslateX(x);
-        setTranslateY(y);
+        set(x, y);
         rotateTo(Direction.UP, 1);
     }
 
@@ -71,5 +79,12 @@ public class Frog extends Rectangle {
     
     public boolean isDead() {
         return getFill() == dead;
+    }
+
+    @Override
+    public String toString() {
+        return "Frog{" +
+                "direction=" + direction +
+                '}';
     }
 }
