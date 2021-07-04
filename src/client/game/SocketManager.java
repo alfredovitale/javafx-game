@@ -289,7 +289,7 @@ public class SocketManager {
 //                        StartClient.getGameController().setX1(splitted[7]);
 //                        StartClient.getGameController().setY1(splitted[8]);
 //
-//                        // add second player
+//                        // addCar second player
 //                        if (!player2ID.equals("")) {
 //                            StartClient.getGameController().setX2(splitted[9]);
 //                            StartClient.getGameController().setY2(splitted[10]);

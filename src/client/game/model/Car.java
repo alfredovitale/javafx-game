@@ -12,8 +12,8 @@ public class Car extends Rectangle {
 
     public Car(AssetData data) {
         super(data.getWidth(), data.getHeight());
-        this.setFill(new ImagePattern(new Image(data.getUrl())));
-
+        setFill(new ImagePattern(new Image(data.getUrl())));
+        setStyle("-fx-background-color: red; -fx-border-style: solid; -fx-border-width: 5; -fx-border-color: black; -fx-min-width: 20; -fx-min-height:20; -fx-max-width:20; -fx-max-height: 20;");
     }
 
     public void draw() {

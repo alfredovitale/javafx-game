@@ -32,3 +32,43 @@
     -fx-font-size: 16pt;
     -fx-effect: dropshadow(gaussian, #6b6b6b, 1, 1.0, 1, 1);
 }
+
+/* import fonts */
+@font-face {
+    font-family: "Showcard Gothic";
+    /*font-style: normal;*/
+    /*font-weight: 400;*/
+    src: url("SHOWG.TTF");
+}
+/* Set fonts */
+
+.button{
+    -fx-font-size: 18px;
+    -fx-font-family: "Showcard Gothic";
+    /*-fx-font-weight: 50;*/
+    /*-fx-text-fill: #09f;*/
+    -fx-text-fill: white;
+    -fx-background-color: #aad35d;
+
+}
+.label{
+    -fx-font-size: 14px;
+    -fx-font-family: "Showcard Gothic";
+    /*-fx-font-weight: 50;*/
+    /*-fx-text-fill: #09f;*/
+    -fx-text-fill: green;
+
+}
+
+#registration, #loginlabel{
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+#username, #password{
+    -fx-font-size: 14px;
+    -fx-text-fill: grey;
+}
+#textfield {
+    -fx-font-family: "Lato";
+    -fx-text-fill: black;
+}
