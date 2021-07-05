@@ -278,8 +278,10 @@ public class GameController {
             pane.setEffect(shadow);
             
             Label label = new Label(win ? "YOU WIN!" : "YOU LOSE!");
+            label.setStyle("-fx-font-size:48px");
             label.setLayoutX(200);
             label.setLayoutY(52);
+
 
             String bg = win ? ASSETS + "/winner.png" : ASSETS + "/loser.png";
 //            final Parent gameOver = AppScreen.GAME_OVER.getParent();
