@@ -20,6 +20,7 @@ public class ScoresController {
         table.getColumns().add(getPosColumn());
         table.getColumns().add(getUserColumn());
         table.getColumns().add(getScoreColumn());
+        table.getItems().clear();
         
         StartClient.getSocketManager().showScores(scores -> 
                 Platform.runLater(() -> 
