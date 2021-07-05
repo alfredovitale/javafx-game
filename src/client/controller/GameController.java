@@ -236,9 +236,9 @@ public class GameController {
         pane.setPrefWidth(WIDTH);
         pane.setPadding(new Insets(10));
         final BorderPane node = new BorderPane();
-        node.setLeft(scores1);
+        //node.setLeft(scores1);
         node.setCenter(time);
-        node.setRight(scores2);
+        //node.setRight(scores2);
         pane.setCenter(node);
 
         leftLives = new HBox(newLives("/client/resources/assets/live.png"));
